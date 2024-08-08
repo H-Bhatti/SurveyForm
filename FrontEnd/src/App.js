@@ -9,7 +9,6 @@ function App() {
   survey.onComplete.add((sender) => {
     console.log(sender.data);
   });
-
   return <Survey model={survey} />;
 }
 
