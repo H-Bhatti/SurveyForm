@@ -1,19 +1,21 @@
 // Get the client
-// from .env
+// from.env;
 // require("dotenv").config();
-// let HOST = process.env.HOST;
-// let USER = process.env.USER;
-// let DATABASE = process.env.DATABASE;
-// let PASSWORD = process.env.PASSWORD;
+import "dotenv/config.js";
+
+let HOST = process.env.HOST;
+let USER = process.env.USER;
+let DATABASE = process.env.DATABASE;
+let PASSWORD = process.env.PASSWORD;
 
 import mysql from "mysql2";
 
-// Create the connection to database
+// Create the connection to database with env
 const pool = mysql.createConnection({
-  host: "127.0.0.1",
-  user: "root",
-  password: "password",
-  database: "mydb",
+  host: HOST,
+  user: USER,
+  password: PASSWORD,
+  database: DATABASE,
 });
 
 // create connection to database
